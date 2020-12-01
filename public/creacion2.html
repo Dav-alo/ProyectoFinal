@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de Personaje pag 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        p,
+        li {
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        p.Registro {
+            text-indent: 40px;
+        }
+
+        .divider {
+            width: 5px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .btn-default {
+            color: white;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("/Proyecto Final/Images/d&d.jpg");
+            background-repeat: no-repeat;
+            background-size: 1950px 1000px;
+
+        }
+
+        .form {
+            width: 500px;
+            margin-top: 10px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .label {
+            display: block;
+            font: 14px Oswald;
+            text-transform: uppercase;
+            color: White;
+            font-weight: 700;
+            text-shadow: #000 0px 1px 2px;
+        }
+
+        /*The Range Bar*/
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            padding: 2px;
+            margin-top: 10px;
+            box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+        }
+
+        /*The Range Dial*/
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: white;
+            position: relative;
+            z-index: 3;
+            box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            cursor: pointer;
+        }
+
+        input[name="range"]::-webkit-slider-thumb:after {
+            content: " ";
+            width: 1000px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            top: 0px;
+            background: rgb(116, 252, 250);
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(116, 252, 250, 1) 0%, rgba(89, 205, 247, 1) 50%, rgba(54, 200, 237, 1) 52%, rgba(34, 244, 230, 1) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(116, 252, 250, 1)), color-stop(50%, rgba(89, 205, 247, 1)), color-stop(52%, rgba(54, 200, 237, 1)), color-stop(100%, rgba(34, 244, 230, 1)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(116, 252, 250, 1) 0%, rgba(89, 205, 247, 1) 50%, rgba(54, 200, 237, 1) 52%, rgba(34, 244, 230, 1) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(116, 252, 250, 1) 0%, rgba(89, 205, 247, 1) 50%, rgba(54, 200, 237, 1) 52%, rgba(34, 244, 230, 1) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(116, 252, 250, 1) 0%, rgba(89, 205, 247, 1) 50%, rgba(54, 200, 237, 1) 52%, rgba(34, 244, 230, 1) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(116, 252, 250, 1) 0%, rgba(89, 205, 247, 1) 50%, rgba(54, 200, 237, 1) 52%, rgba(34, 244, 230, 1) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74fcfa', endColorstr='#22f4e6', GradientType=0);
+            /* IE6-9 */
+        }
+
+
+        input[name="range1"]::-webkit-slider-thumb:after {
+            content: " ";
+            width: 1000px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            top: 0px;
+            background: rgb(59, 103, 158);
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(59, 103, 158, 1)), color-stop(50%, rgba(43, 136, 217, 1)), color-stop(51%, rgba(32, 124, 202, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b679e', endColorstr='#7db9e8', GradientType=0);
+            /* IE6-9 */
+        }
+
+        input[name="range2"]::-webkit-slider-thumb:after {
+            content: " ";
+            width: 1000px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            right: 22px;
+            top: 0px;
+            background: rgb(203, 96, 179);
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(173, 18, 131, 1) 50%, rgba(222, 71, 172, 1) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(203, 96, 179, 1)), color-stop(50%, rgba(173, 18, 131, 1)), color-stop(100%, rgba(222, 71, 172, 1)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(173, 18, 131, 1) 50%, rgba(222, 71, 172, 1) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(173, 18, 131, 1) 50%, rgba(222, 71, 172, 1) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(203, 96, 179, 1) 0%, rgba(173, 18, 131, 1) 50%, rgba(222, 71, 172, 1) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(203, 96, 179, 1) 0%, rgba(173, 18, 131, 1) 50%, rgba(222, 71, 172, 1) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cb60b3', endColorstr='#de47ac', GradientType=0);
+            /* IE6-9 */
+        }
+
+        .output {
+            color: white;
+            font: 16px Oswald;
+            position: absolute;
+            top: 0px;
+            left: 429px;
+            text-shadow: #000 0px 1px 2px;
+        }
+
+        .output2 {
+            color: white;
+            font: 16px Oswald;
+            position: absolute;
+            top: 80px;
+            left: 429px;
+            text-shadow: #000 0px 1px 2px;
+        }
+
+        .output3 {
+            color: white;
+            font: 16px Oswald;
+            position: absolute;
+            top: 160px;
+            left: 429px;
+            text-shadow: #000 0px 1px 2px;
+        }
+
+        .output4 {
+            color: white;
+            font: 16px Oswald;
+            position: absolute;
+            top: 255px;
+            left: 429px;
+            text-shadow: #000 0px 1px 2px;
+        }
+
+        .siguiente {
+            color: black;
+            text-align: center;
+            float: right;
+            padding: 25px;
+
+        }
+
+        .personaje {
+            padding-left: 50px;
+            padding-right: 150px;
+            width: 100%;
+            height: auto;
+        }
+
+        .range2,
+        .range3,
+        .range4 {
+            margin-top: 20px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="home.HTML">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consultas.html">Administracion de Personajes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <!-- Button trigger modal REGISTRO -->
+        <li class="nav-item" id="right">
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registro">
+                Registrarse
+            </button>
+        </li>
+        <li class="nav-item" id="right">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#login">
+                Login
+            </button>
+            </ul>
+        
+    </nav>
+
+    <!-- Modal FOR lOGIN  -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#login" id="#login"
+        aria-labelledby="#login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-signin">
+
+
+                        <p>Correo</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                required autofocus>
+                        </div>
+                        <p>Password</p>
+                        <label for="inputPassword" class="sr-only">Contraseña</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+
+                </div>
+                <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
+                        data-dismiss="modal">Registrate aqui! </a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal FOR Registro -->
+    <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="signup-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6"><input type="text" class="form-control" name="first_name"
+                                            placeholder="Nombre o Nombres" required="required"></div>
+                                    <div class="col-6"><input type="text" class="form-control" name="last_name"
+                                            placeholder="Apellido" required="required"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Confirmar Contraseña" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" name="birthdate" placeholder="01/01/2000"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sexo" name="sexo" value="Hombre">
+                                <label for="sexo">Hombre</label><br>
+                                <input type="radio" id="sexo1" name="sexo" value="Mujer">
+                                <label for="sexo1">Mujer</label><br>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="url" class="form-control" name="URL" placeholder="Url de tu imagen"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+                            </div>
+                        </form>
+                        <div class="text-center">Ya tienes una cuenta? <a data-toogle="modal" href="#login"
+                                data-toggle="modal" data-target="#login" data-dismiss="modal">Login</a></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ScrollBar-->
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <!--Header-->
+    <span class="borderBottom"></span>
+    <h1>Escoge tus puntos de Habilidad </h1>
+    <span class="borderTop"></span>
+    <table>
+        <tr>
+            <td><img src="/Proyecto Final/Images/personaje2.png" alt="Personaje" class="personaje"></td>
+
+
+
+            <td>
+                <!--Form Container-->
+                <div class="form">
+                    <form>
+                        <div class="range1">
+                            <label for="range" class="label">Fuerza <i class="fas fa-dumbbell"></i></label>
+                            <input type="range" name="range" min="0" max="10" step="1" value="10">
+                            <output for="range" class="output"></output>
+                        </div>
+                        <div class="range2">
+                            <label for="range" class="label">Inteligencia <i class="fas fa-brain "> </i></label>
+                            <input type="range" name="range1" min="0" max="10" step="1" value="10">
+                            <output for="range1" class="output2"></output>
+                        </div>
+                        <div class="range3">
+                            <label for="range" class="label">Magia <i class="fas fa-magic"></i></label>
+                            <input type="range" name="range2" min="0" max="10" step="1" value="10">
+                            <output for="range2" class="output3"></output>
+                        </div>
+                        <div class="range4">
+                            <label for="range" class="label">Dureza <i class="fas fa-hard-hat"></i></i></label>
+                            <input type="range" name="range3" min="0" max="10" step="1" value="10">
+                            <output for="range3" class="output4"></output>
+                        </div>
+                    </form>
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" value="Siguiente" class="siguiente" onClick="funcionAsociadaBoton()">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> F&D Consulting</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dist/powerange.css" />
+    <script src="powerange.js"></script>
+
+</body>
+
+</html>
