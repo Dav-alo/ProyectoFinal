@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escoger raza</title>
-     <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
+    <!------ Include the above in your HEAD tag ---------->
     <!--[if gte mso 9]><xml>
     <mso:CustomDocumentProperties>
     <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">GONZALEZ OCEGUERA, OSCAR JOSE</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
@@ -30,9 +31,10 @@
     </xml><![endif]-->
 
     <style>
-        input:invalid{
+        input:invalid {
             border-color: red;
         }
+
         .themed-container-texto {
             /*padding: 15px;
             background-image: url("img/fondo_clases.jpg");*/
@@ -46,6 +48,7 @@
             color: black;
             padding-bottom: 15px;
         }
+
         .themed-inner-container {
             /*padding: 15px;
             background-image: url("img/fondo_clases.jpg");
@@ -57,33 +60,198 @@
             min-width: 300px;
             min-height: 440px;
         }
+
         .btn-image {
             background-image: url("Images/boton_razas.jpg");
             background-size: cover;
             color: white;
             border: black;
         }
+
         .texto-peque {
             font-size: small;
             max-height: 200px;
             overflow-y: scroll;
             text-align: left;
         }
+
         .background-container {
             background-image: url("Images/fondo_razas.jpg");
             background-size: cover;
         }
+
+        .btn-default {
+            color: white;
+        }
+
+        .Atras {
+            color: white;
+            text-align: center;
+            float: left;
+            padding: 25px;
+            background-color: black;
+
+        }
+
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            background-color: gray;
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="nav navbar-nav">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Sing-up</a>
-          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
-          <a class="nav-item nav-link" href="#">Character Admin</a>
-        </div>
+    <!--INICIO DE MODAL DE HOME Y REGISTRO -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="index.HTML">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Character Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Us </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Button trigger modal REGISTRO -->
+            <li class="nav-item" id="right">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registro">
+                    Register
+                </button>
+            </li>
+            <li class="nav-item" id="right">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#login">
+                    Login
+                </button>
+        </ul>
+
     </nav>
+    <!-- Modal FOR lOGIN  -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#login" id="#login"
+        aria-labelledby="#login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-signin">
+
+
+                        <p>Correo</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                required autofocus>
+                        </div>
+                        <p>Password</p>
+                        <label for="inputPassword" class="sr-only">Contraseña</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+
+                </div>
+                <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
+                        data-dismiss="modal">Registrate aqui! </a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal FOR Registro -->
+    <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="signup-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6"><input type="text" class="form-control" name="first_name"
+                                            placeholder="Nombre o Nombres" required="required"></div>
+                                    <div class="col-6"><input type="text" class="form-control" name="last_name"
+                                            placeholder="Apellido" required="required"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Confirmar Contraseña" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" name="birthdate" placeholder="01/01/2000"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sexo" name="sexo" value="Hombre">
+                                <label for="sexo">Hombre</label><br>
+                                <input type="radio" id="sexo1" name="sexo" value="Mujer">
+                                <label for="sexo1">Mujer</label><br>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="url" class="form-control" name="URL" placeholder="Url de tu imagen"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+                            </div>
+                        </form>
+                        <div class="text-center">Ya tienes una cuenta? <a data-toogle="modal" href="#login"
+                                data-toggle="modal" data-target="#login" data-dismiss="modal">Login</a></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINAL DE MODAL DE HOME Y REGISTRO -->
+
     <div class="container-fluid background-container">
         <div class="table-responsive">
             <table class="table">
@@ -98,13 +266,16 @@
                                     Dragonborn
                                     <p class="texto-peque overflow-hidden">
                                         <b>Dragonborn Fury</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;When you’re bloodied, you gain a minor racial bonus to attack rolls.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;When you’re bloodied, you gain a minor racial bonus to
+                                        attack rolls.<br>
                                         <b>Draconic Heritage</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Your healing surge value is equal to one-quarter of your maximum hit points + your Constitution modifier.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Your healing surge value is equal to one-quarter of your
+                                        maximum hit points + your Constitution modifier.<br>
                                         <b>Dragonborn Racial Power</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use either dragon breath or Dragonfear as an encounter power.
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use either dragon breath or Dragonfear as an
+                                        encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -121,16 +292,24 @@
                                         <b>Cast-Iron Stomach</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;High racial bonus to saving throws against poison.<br>
                                         <b>Dwarven Resilience</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use your second wind as a minor action instead of a standard action.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use your second wind as a minor action instead
+                                        of a standard action.<br>
                                         <b>Dwarven Weapon Proficiency</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain proficiency with the throwing hammer and the warhammer.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain proficiency with the throwing hammer and the
+                                        warhammer.<br>
                                         <b>Encumbered Speed</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You move at your normal speed even when it would normally be reduced by armor or a heavy load. Other effects that limit speed (such as difficult terrain or magical effects) affect you normally.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You move at your normal speed even when it would
+                                        normally be reduced by armor or a heavy load. Other effects that limit speed
+                                        (such as difficult terrain or magical effects) affect you normally.<br>
                                         <b>Stand Your Ground</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;When an effect forces you to move—through a pull, a push, or a slide—you can move a square less than the effect specifies. This means an effect that normally pulls, pushes, or slides a target a square does not force you to move unless you want to.<br>
-                                            In addition, when an attack would knock you prone, you can immediately make a saving throw to avoid falling prone.  
+                                        &nbsp;&nbsp;&nbsp;&nbsp;When an effect forces you to move—through a pull, a
+                                        push, or a slide—you can move a square less than the effect specifies. This
+                                        means an effect that normally pulls, pushes, or slides a target a square does
+                                        not force you to move unless you want to.<br>
+                                        In addition, when an attack would knock you prone, you can immediately make a
+                                        saving throw to avoid falling prone.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -145,19 +324,28 @@
                                     Eladrin
                                     <p class="texto-peque">
                                         <b>Eladrin Education</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;They gain training in one additional skill of their choice.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;They gain training in one additional skill of their
+                                        choice.<br>
                                         <b>Eladrin Weapon Proficiency</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;They gain proficiency with the longsword.<br>
                                         <b>Eladrin Will</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;They gain a minor racial bonus to their Will defense. In addition, they gain a moderate racial bonus to saving throws against charm effects.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;They gain a minor racial bonus to their Will defense. In
+                                        addition, they gain a moderate racial bonus to saving throws against charm
+                                        effects.<br>
                                         <b>Fey Origin</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Their ancestors were native to the Feywild, so you are considered a fey creature for the purpose of effects that relate to creature origin.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Their ancestors were native to the Feywild, so you are
+                                        considered a fey creature for the purpose of effects that relate to creature
+                                        origin.<br>
                                         <b>Trance</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Rather than sleep, eladrin enter a meditative state known as trance. You need to spend 4 hours in this state to gain the same benefits other races gain from taking a 6-hour extended rest. While in a trance, you are fully aware of your surroundings and notice approaching enemies and other events as normal.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Rather than sleep, eladrin enter a meditative state
+                                        known as trance. You need to spend 4 hours in this state to gain the same
+                                        benefits other races gain from taking a 6-hour extended rest. While in a trance,
+                                        you are fully aware of your surroundings and notice approaching enemies and
+                                        other events as normal.<br>
                                         <b>Fey Step</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;They can use fey step as an encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -172,17 +360,22 @@
                                     Elf
                                     <p class="texto-peque">
                                         <b>Elven Weapon Proficiency</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain proficiency with the longbow and the shortbow.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain proficiency with the longbow and the
+                                        shortbow.<br>
                                         <b>Fey Origin</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Your ancestors were native to the Feywild, so you are considered a fey creature for the purpose of effects that relate to creature origin.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Your ancestors were native to the Feywild, so you are
+                                        considered a fey creature for the purpose of effects that relate to creature
+                                        origin.<br>
                                         <b>Group Awareness</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You grant non-elf allies within a number of squares of you a minor racial bonus to Perception checks.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You grant non-elf allies within a number of squares of
+                                        you a minor racial bonus to Perception checks.<br>
                                         <b>Wild Step</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You ignore difficult terrain when you shift (even if you have a power that allows you to shift multiple squares).<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You ignore difficult terrain when you shift (even if you
+                                        have a power that allows you to shift multiple squares).<br>
                                         <b>Elven Accuracy</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;You can use elven accuracy as an encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -197,16 +390,21 @@
                                     Half-Elf
                                     <p class="texto-peque">
                                         <b>Dual Heritage</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You can take feats that have either elf or human as a prerequisite (as well as those specifically for half-elves), as long as you meet any other requirements.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You can take feats that have either elf or human as a
+                                        prerequisite (as well as those specifically for half-elves), as long as you meet
+                                        any other requirements.<br>
                                         <b>Group Diplomacy</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You grant allies within a large amount of squares of you a minor racial bonus to Diplomacy checks.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You grant allies within a large amount of squares of you
+                                        a minor racial bonus to Diplomacy checks.<br>
                                         <b>Your choice of:</b><br>
                                         &nbsp;&nbsp;<b>Dilettante</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;At 1st level, you choose a 1st-level at-will attack power from a class different from yours. You can use that power as an encounter power.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;At 1st level, you choose a 1st-level at-will attack
+                                        power from a class different from yours. You can use that power as an encounter
+                                        power.<br>
                                         &nbsp;&nbsp;<b>Knack for Success</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;You have the knack for success racial utility power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -221,13 +419,15 @@
                                     Halfing
                                     <p class="texto-peque overflow-hidden">
                                         <b>Bold</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Halflings gain a moderate racial bonus to saving throws to end effects caused by fear keyword powers.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Halflings gain a moderate racial bonus to saving throws
+                                        to end effects caused by fear keyword powers.<br>
                                         <b>Nimble Reaction</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Halflings gain a minor racial bonus to AC against opportunity attacks.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Halflings gain a minor racial bonus to AC against
+                                        opportunity attacks.<br>
                                         <b>Second Chance</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;Halflings gain second chance as an encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -242,13 +442,16 @@
                                     Human
                                     <p class="texto-peque overflow-hidden">
                                         <b>Dragonborn Fury</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;When you’re bloodied, you gain a minor racial bonus to attack rolls.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;When you’re bloodied, you gain a minor racial bonus to
+                                        attack rolls.<br>
                                         <b>Draconic Heritage</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;Your healing surge value is equal to one-quarter of your maximum hit points + your Constitution modifier.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Your healing surge value is equal to one-quarter of your
+                                        maximum hit points + your Constitution modifier.<br>
                                         <b>Dragonborn Racial Power</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use either dragon breath or Dragonfear as an encounter power.
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You can use either dragon breath or Dragonfear as an
+                                        encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -263,13 +466,15 @@
                                     Tiefling
                                     <p class="texto-peque overflow-hidden">
                                         <b>Bloodhunt</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain a minor racial bonus to attack rolls against bloodied foes.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You gain a minor racial bonus to attack rolls against
+                                        bloodied foes.<br>
                                         <b>Fire Resistance</b><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;You have resist fire a moderate amount + one-half your level.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;You have resist fire a moderate amount + one-half your
+                                        level.<br>
                                         <b>Infernal Wrath</b><br>
                                         &nbsp;&nbsp;&nbsp;&nbsp;You can use infernal wrath as an encounter power.
                                     </p>
-                                    <button type="button" class="btn-image" href="#">
+                                    <button type="button" class="btn-image" onclick="funcionrazaclase()">
                                         Choose race
                                     </button>
                                 </div>
@@ -280,5 +485,31 @@
             </table>
         </div>
     </div>
+    <input type="button" value="Atras" class="Atras" onClick="funcionregresar1()">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> F&D Consulting</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+<script src="js/functions.js"></script>
+
+
 </html>

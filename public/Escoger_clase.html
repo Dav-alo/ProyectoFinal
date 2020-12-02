@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escoger clase</title>
-     <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -30,9 +31,10 @@
     </xml><![endif]-->
 
     <style>
-        input:invalid{
+        input:invalid {
             border-color: red;
         }
+
         .themed-container {
             padding: 15px;
             background-image: url("Images/fondo_clases.jpg");
@@ -41,8 +43,9 @@
             background-color: rgba(0, 123, 255, .15);
             border: 1px solid rgba(0, 123, 255, .2);*/
         }
+
         .themed-grid-col {
-            
+
             padding-top: 15px;
             padding-bottom: 15px;
             margin: auto;
@@ -53,32 +56,197 @@
             background-color: rgba(86, 61, 124, .15);
             border: 1px solid rgba(86, 61, 124, .2);*/
         }
+
         .individual {
             background-image: url("Images/fondo_individual_clases.png");
         }
+
         .texto-peque {
             font-size: small;
         }
+
+        .btn-default {
+            color: white;
+        }
+
+        .Atras {
+            color: white;
+            text-align: center;
+            float: left;
+            padding: 25px;
+            background-color: gray;
+
+        }
+
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            background-color: gray;
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="nav navbar-nav">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Sing-up</a>
-          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
-          <a class="nav-item nav-link" href="#">Character Admin</a>
-        </div>
+    <!--INICIO DE MODAL DE HOME Y REGISTRO -->
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="index.HTML">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Character Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html"> Us </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Button trigger modal REGISTRO -->
+            <li class="nav-item" id="right">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registro">
+                    Register
+                </button>
+            </li>
+            <li class="nav-item" id="right">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#login">
+                    Login
+                </button>
+        </ul>
+
     </nav>
+    <!-- Modal FOR lOGIN  -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#login" id="#login"
+        aria-labelledby="#login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-signin">
+
+
+                        <p>Correo</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                required autofocus>
+                        </div>
+                        <p>Password</p>
+                        <label for="inputPassword" class="sr-only">Contraseña</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+
+                </div>
+                <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
+                        data-dismiss="modal">Registrate aqui! </a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal FOR Registro -->
+    <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="signup-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6"><input type="text" class="form-control" name="first_name"
+                                            placeholder="Nombre o Nombres" required="required"></div>
+                                    <div class="col-6"><input type="text" class="form-control" name="last_name"
+                                            placeholder="Apellido" required="required"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Confirmar Contraseña" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" name="birthdate" placeholder="01/01/2000"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sexo" name="sexo" value="Hombre">
+                                <label for="sexo">Hombre</label><br>
+                                <input type="radio" id="sexo1" name="sexo" value="Mujer">
+                                <label for="sexo1">Mujer</label><br>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="url" class="form-control" name="URL" placeholder="Url de tu imagen"
+                                    required="required">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+                            </div>
+                        </form>
+                        <div class="text-center">Ya tienes una cuenta? <a data-toogle="modal" href="#login"
+                                data-toggle="modal" data-target="#login" data-dismiss="modal">Login</a></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINAL DE MODAL DE HOME Y REGISTRO -->
     <div class="container-fluid themed-container">
         <div class="row mb-3">
-            <div class="col-6 themed-grid-col">       
+            <div class="col-6 themed-grid-col">
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Cleric
                         <p class="texto-peque">
-                            You are an extremely good healer. You have a mixed of melee and ranged powers. Most of your attacks deal only moderate damage, but they safeguard your allies or provide bounses to their attack.   
+                            You are an extremely good healer. You have a mixed of melee and ranged powers. Most of your
+                            attacks deal only moderate damage, but they safeguard your allies or provide bounses to
+                            their attack.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -88,13 +256,16 @@
                 </div>
             </div>
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Fighter
                         <p class="texto-peque">
-                            You are extremely tough, with a great Armor Class and lots of hit points. You have extraordinary resilience against physical attack. You don’t have much ability to fight at range, but you excel in melee combat. You have special abilities that make it dangerous for enemies to ignore you, so you can contain foes and keep them away from your friends. 
+                            You are extremely tough, with a great Armor Class and lots of hit points. You have
+                            extraordinary resilience against physical attack. You don’t have much ability to fight at
+                            range, but you excel in melee combat. You have special abilities that make it dangerous for
+                            enemies to ignore you, so you can contain foes and keep them away from your friends.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -106,13 +277,15 @@
         </div>
         <div class="row mb-3">
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Paladin
                         <p class="texto-peque">
-                            You are extremely durable, with high hit points and the ability to wear the heaviest armor.You can issue bold challenges to foes and compel them to fight you rather than your allies.
+                            You are extremely durable, with high hit points and the ability to wear the heaviest
+                            armor.You can issue bold challenges to foes and compel them to fight you rather than your
+                            allies.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -122,13 +295,16 @@
                 </div>
             </div>
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Ranger
                         <p class="texto-peque">
-                            You combine fast, hard-hitting melee attack power with excellent ranged attack ability, and shift easily from melee to ranged combat. You are moderately resilient in battle, but you prefer hit-and-run attacks or ambushes to prolonged slugging matches. Hit hard, get out; that’s the ranger’s way. 
+                            You combine fast, hard-hitting melee attack power with excellent ranged attack ability, and
+                            shift easily from melee to ranged combat. You are moderately resilient in battle, but you
+                            prefer hit-and-run attacks or ambushes to prolonged slugging matches. Hit hard, get out;
+                            that’s the ranger’s way.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -136,17 +312,19 @@
                         <img src="Images/Ranger.png" class="img-fluid" alt="Image of Fighter">
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
         <div class="row mb-3">
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Rouge
                         <p class="texto-peque">
-                            Rogues are cunning and elusive adversaries. Rogues slip into and out of shadows on a whim, pass anywhere across the field of battle without fear of reprisal, and appear suddenly only to drive home a lethal blade. 
+                            Rogues are cunning and elusive adversaries. Rogues slip into and out of shadows on a whim,
+                            pass anywhere across the field of battle without fear of reprisal, and appear suddenly only
+                            to drive home a lethal blade.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -156,13 +334,15 @@
                 </div>
             </div>
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Warlock
                         <p class="texto-peque">
-                            You have excellent short-ranged attack ability, and your powers confuse or weaken your opponent. You can shift easily from ranged attacks to melee attacks. However, you are not very resilient and rely on powers of evasion and concealment to avoid attack. 
+                            You have excellent short-ranged attack ability, and your powers confuse or weaken your
+                            opponent. You can shift easily from ranged attacks to melee attacks. However, you are not
+                            very resilient and rely on powers of evasion and concealment to avoid attack.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -174,13 +354,17 @@
         </div>
         <div class="row mb-3">
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Warlord
                         <p class="texto-peque">
-                            A warrior can learn much from history, for war stains its pages. Every conflict that has erupted between peoples, every battle that forged an empire, and every failure that led to that empire’s fall prove instructive to those who study them. The warlord is a military leader, a skilled commander gifted with tactical genius, keen insight, an inspiring personality, or some other asset that convinces others to follow him or her into danger.
+                            A warrior can learn much from history, for war stains its pages. Every conflict that has
+                            erupted between peoples, every battle that forged an empire, and every failure that led to
+                            that empire’s fall prove instructive to those who study them. The warlord is a military
+                            leader, a skilled commander gifted with tactical genius, keen insight, an inspiring
+                            personality, or some other asset that convinces others to follow him or her into danger.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -190,13 +374,15 @@
                 </div>
             </div>
             <div class="col-6 themed-grid-col">
-                
+
                 <div class="row mb-3 individual">
                     <div class="col-6 themed-grid-col">Wizard
                         <p class="texto-peque">
-                            Wizards are scions of arcane magic. Wizards tap the true power that permeates the cosmos, research esoteric rituals that can alter time and space, and hurl balls of fire that incinerate massed foes. Wizards wield spells the way warriors brandish swords. 
+                            Wizards are scions of arcane magic. Wizards tap the true power that permeates the cosmos,
+                            research esoteric rituals that can alter time and space, and hurl balls of fire that
+                            incinerate massed foes. Wizards wield spells the way warriors brandish swords.
                         </p>
-                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="funcionclasepuntos()">
                             Choose class
                         </button>
                     </div>
@@ -204,8 +390,42 @@
                         <img src="Images/Wizard.png" class="img-fluid" alt="Image of Fighter">
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
+
+    <input type="button" value="Atras" class="Atras" onClick="funcionregresar2()">
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> F&D Consulting</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creacion de Personaje pag 2</title>
+    <title>Escoger Puntos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
@@ -37,16 +37,16 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: gray;
+            background-color: black;
             color: white;
             text-align: center;
         }
 
         body {
-            background-color: black;
-            background-image: url("/Proyecto Final/Images/d&d.jpg");
+            background-color: gray;
+            background-image: url("Images/fondo_puntos.jpg");
             background-repeat: no-repeat;
-            background-size: 1950px 1000px;
+            background-size: 1950px 1050px;
 
         }
 
@@ -209,11 +209,12 @@
             text-shadow: #000 0px 1px 2px;
         }
 
-        .siguiente {
-            color: black;
+        .Finalizar {
+            color: white;
             text-align: center;
             float: right;
             padding: 25px;
+            background-color: gray;
 
         }
 
@@ -229,7 +230,15 @@
         .range4 {
             margin-top: 20px;
         }
-        
+
+        .Atras {
+            color: white;
+            text-align: center;
+            float: left;
+            padding: 25px;
+            background-color: gray;
+
+        }
     </style>
 
 </head>
@@ -240,29 +249,29 @@
         <!-- Navbar content -->
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link" href="home.HTML">Home </a>
+                <a class="nav-link" href="index.html">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="consultas.html">Administracion de Personajes</a>
+                <a class="nav-link" href="Estadisticas_de_personaje.html">Administracion de Personajes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <!-- Button trigger modal REGISTRO -->
-        <li class="nav-item" id="right">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registro">
-                Registrarse
-            </button>
-        </li>
-        <li class="nav-item" id="right">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#login">
-                Login
-            </button>
-            </ul>
-        
+            <!-- Button trigger modal REGISTRO -->
+            <li class="nav-item" id="right">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registro">
+                    Registrarse
+                </button>
+            </li>
+            <li class="nav-item" id="right">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#login">
+                    Login
+                </button>
+        </ul>
+
     </nav>
 
     <!-- Modal FOR lOGIN  -->
@@ -387,11 +396,11 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
     <!--Header-->
     <span class="borderBottom"></span>
-    <h1>Escoge tus puntos de Habilidad </h1>
+    <h1>Choose your habilty points </h1>
     <span class="borderTop"></span>
     <table>
         <tr>
-            <td><img src="/Proyecto Final/Images/personaje2.png" alt="Personaje" class="personaje"></td>
+            <td><img src="Images/Goliat.webp" alt="Personaje" class="personaje"></td>
 
 
 
@@ -400,22 +409,22 @@
                 <div class="form">
                     <form>
                         <div class="range1">
-                            <label for="range" class="label">Fuerza <i class="fas fa-dumbbell"></i></label>
+                            <label for="range" class="label">Hardness <i class="fas fa-dumbbell"></i></label>
                             <input type="range" name="range" min="0" max="10" step="1" value="10">
                             <output for="range" class="output"></output>
                         </div>
                         <div class="range2">
-                            <label for="range" class="label">Inteligencia <i class="fas fa-brain "> </i></label>
+                            <label for="range" class="label">Intelligence <i class="fas fa-brain "> </i></label>
                             <input type="range" name="range1" min="0" max="10" step="1" value="10">
                             <output for="range1" class="output2"></output>
                         </div>
                         <div class="range3">
-                            <label for="range" class="label">Magia <i class="fas fa-magic"></i></label>
+                            <label for="range" class="label">Magic <i class="fas fa-magic"></i></label>
                             <input type="range" name="range2" min="0" max="10" step="1" value="10">
                             <output for="range2" class="output3"></output>
                         </div>
                         <div class="range4">
-                            <label for="range" class="label">Dureza <i class="fas fa-hard-hat"></i></i></label>
+                            <label for="range" class="label">Strenght <i class="fas fa-hard-hat"></i></i></label>
                             <input type="range" name="range3" min="0" max="10" step="1" value="10">
                             <output for="range3" class="output4"></output>
                         </div>
@@ -427,7 +436,8 @@
         </tr>
     </table>
 
-    <input type="button" value="Siguiente" class="siguiente" onClick="funcionAsociadaBoton()">
+    <input type="button" value="Finalizar" class="Finalizar" onClick="funcionbotonpersonaje()">
+    <input type="button" value="Atras" class="Atras" onClick="funcionregresar3()">
     <!-- Footer -->
     <footer class="page-footer font-small blue">
 
@@ -453,8 +463,7 @@
     </script>
     <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="dist/powerange.css" />
-    <script src="powerange.js"></script>
+    <script src="js/functions.js"></script>
 
 </body>
 

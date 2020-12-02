@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Base de datos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
@@ -28,37 +28,36 @@
             color: white;
         }
 
+        .nav-link {
+            background-color: none;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("Images/Base_de_datos.jpg");
+            background-repeat: no-repeat;
+            background-size: 1950px 900px;
+
+        }
+
+        .jumbotron {
+            background: none
+        }
+
         footer {
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: black;
+            background-color: gray;
             color: white;
             text-align: center;
         }
 
-        body {
-            background-color: gray;
-        }
-
-        .center {
+        .right {
             margin-left: auto;
-            margin-right: auto;
         }
-
-        td {
-            padding-top: 100px;
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-bottom: 15px;
-            text-align: center;
-            word-break: keep-all;
-            font: 26px Oswald;
-
-        }
-
-        /*t {}*/
     </style>
 
 </head>
@@ -210,51 +209,144 @@
         </div>
     </div>
     <!--FINAL DE MODAL DE HOME Y REGISTRO -->
-    <div>
-        <h1 style="text-align: center; padding: 50px; size: 50px;">Nosotros</h1>
-    </div>
-    <table class="center">
-        <tr>
-            <td>
-                <i class="fas fa-users fa-7x"></i>
-            </td>
-            <td>
-                <i class="fas fa-star fa-7x"></i>
-            </td>
-            <td>
-                <i class="fas fa-building fa-7x"></i>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Somos una Consultoría Independiente enfocada en crear aplicaciones web para el uso en videojuegos ,
-                nos esforzamos en crear aplicaciones que ayuden en la diversión y conocimiento de diferentes
-                juegos de mesa.
-            </td>
-            <td>
-                Llevamos 6 meses de experiencia en el desarrollo de paginas web
-                nos enfocamos en juegos y ayudas para
-                juegos de mesa donde creamos apoyos
-                para la diferentes exigencias de los clientes,
-                asimismo creamos
-                <br>experiencias únicos que influyen en el juego.
-            </td>
-            <td>
-                Nos ubicamos dentro de los limites de Guadalajara Jalisco
-                Actualmente nos encontramos de manera independiente
-                Creando apoyos para los jugadores de juegos de mesa , para
-                Experimentados jugadores de juegos de mesa ,asimismo
-                podemos ayudar en diferentes aspectos de desarrollo web .
+    <div class="container">
 
-            </td>
-        </tr>
-    </table>
+        <div class="row mt-3" style="background-color: gray;">
+            <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="" id="filterInput" class="form-control"
+                        placeholder="nombre de usuario a buscar" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted"><t style="color: black;">Buscar usuario</t></small>
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+
+
+
+        <div class="row  mt-4" id="lista" style="background-color: gray;">
+            <div class="media col-8 mt-2" id="modelo">
+                <div class="media-left align-self-center mr-3">
+                    <img class="rounded-circle" style="width: 320px; height: 320px;"
+                        src="Images/Fighter.png">
+                </div>
+                <div class="media-body">
+                    <h4>John Monster Doe</h4>
+                    <p>Experiencia: 123</p>
+                    <p>Nivel: 1 </p>
+                    <p>Iniciativa: Monster </p>
+                    <p>Fuerza : 1 </p>
+                    <p>consitucion : 1</p>
+                    <p>dexteridad : 1</p>
+                    <p>Inteligencia : 1 </p>
+                    <p>sabiduria : 1</p>
+                    <p>Carisma : 1</p>
+                    <p> Vida maxima : 1</p>
+                    <p>Velocidad : 1</p>
+                </div>
+                <div class="media-right align-self-center">
+                    <div class="row">
+                        <a href="#" class="btn btn-primary edit"><i class="fas fa-search edit  "></i></a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn btn-primary mt-2"><i class="fas fa-pencil-alt edit  "></i></a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn btn-primary mt-2"><i class="fas fa-trash-alt  remove "></i></i></a>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        <nav class="row mt-3 " aria-label="Page navigation">
+            <ul class="pagination" id="pagesList">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active "><a class="page-link  " href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class=text-danger>¿Esta seguro?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="deleteUser(this)">Delete
+                        user</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateFormModal" tabindex="-1" role="dialog" aria-labelledby="updateFormModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateFormModal">Editar usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" name="nombre" id="" class="form-control"
+                                    placeholder="Nombre o nombres" aria-describedby="helpId" required>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="apellidos" id="" class="form-control" placeholder="Apellidos"
+                                    aria-describedby="helpId" required>
+                            </div>
+                        </div>
+                        <input type="password" name="password1" id="" class="form-control mt-3" placeholder="Contraseña"
+                            aria-describedby="helpId" required>
+                        <input type="password" name="password2" id="" class="form-control mt-3"
+                            placeholder="Confirmar contraseña" aria-describedby="helpId" required>
+                        <input type="date" class="form-control mt-3" placeholder="YYYY-MM-DD" name="fecha" id="">
+
+                        <input type="url" name="image" id="" class="form-control mt-3"
+                            placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal"
+                        onclick="updateUser(this)">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <footer class="page-footer font-small blue">
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> no des click aqui !!!!!</a>
+            <a href="#"> F&D Consulting</a>
         </div>
         <!-- Copyright -->
 
