@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escoger clase</title>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <!--[if gte mso 9]><xml>
+    <mso:CustomDocumentProperties>
+    <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">GONZALEZ OCEGUERA, OSCAR JOSE</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+    <mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+    <mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+    <mso:Order msdt:dt="string">911500.000000000</mso:Order>
+    <mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+    <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">GUTIERREZ PRECIADO, LUIS FERNANDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+    <mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+    <mso:ContentTypeId msdt:dt="string">0x0101009AF89F552A2F4149A5B5EC1687935FB5</mso:ContentTypeId>
+    <mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+    <mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+    </mso:CustomDocumentProperties>
+    </xml><![endif]-->
+
+    <style>
+        input:invalid{
+            border-color: red;
+        }
+        .themed-container {
+            padding: 15px;
+            background-image: url("Images/fondo_clases.jpg");
+            /*padding: 15px;
+            margin-bottom: 30px;
+            background-color: rgba(0, 123, 255, .15);
+            border: 1px solid rgba(0, 123, 255, .2);*/
+        }
+        .themed-grid-col {
+            
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: auto;
+            font-family: serif;
+            text-align: center;
+            /*padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);*/
+        }
+        .individual {
+            background-image: url("Images/fondo_individual_clases.png");
+        }
+        .texto-peque {
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="nav navbar-nav">
+          <a class="nav-item nav-link" href="#">Home</a>
+          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Sing-up</a>
+          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
+          <a class="nav-item nav-link" href="#">Character Admin</a>
+        </div>
+    </nav>
+    <div class="container-fluid themed-container">
+        <div class="row mb-3">
+            <div class="col-6 themed-grid-col">       
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Cleric
+                        <p class="texto-peque">
+                            You are an extremely good healer. You have a mixed of melee and ranged powers. Most of your attacks deal only moderate damage, but they safeguard your allies or provide bounses to their attack.   
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Cleric.png" class="img-fluid" alt="Image of Cleric">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Fighter
+                        <p class="texto-peque">
+                            You are extremely tough, with a great Armor Class and lots of hit points. You have extraordinary resilience against physical attack. You don’t have much ability to fight at range, but you excel in melee combat. You have special abilities that make it dangerous for enemies to ignore you, so you can contain foes and keep them away from your friends. 
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Fighter.png" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Paladin
+                        <p class="texto-peque">
+                            You are extremely durable, with high hit points and the ability to wear the heaviest armor.You can issue bold challenges to foes and compel them to fight you rather than your allies.
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Paladin.png" class="img-fluid" alt="Image of Paladin">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Ranger
+                        <p class="texto-peque">
+                            You combine fast, hard-hitting melee attack power with excellent ranged attack ability, and shift easily from melee to ranged combat. You are moderately resilient in battle, but you prefer hit-and-run attacks or ambushes to prolonged slugging matches. Hit hard, get out; that’s the ranger’s way. 
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Ranger.png" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Rouge
+                        <p class="texto-peque">
+                            Rogues are cunning and elusive adversaries. Rogues slip into and out of shadows on a whim, pass anywhere across the field of battle without fear of reprisal, and appear suddenly only to drive home a lethal blade. 
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Rouge.png" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Warlock
+                        <p class="texto-peque">
+                            You have excellent short-ranged attack ability, and your powers confuse or weaken your opponent. You can shift easily from ranged attacks to melee attacks. However, you are not very resilient and rely on powers of evasion and concealment to avoid attack. 
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Warlock.webp" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Warlord
+                        <p class="texto-peque">
+                            A warrior can learn much from history, for war stains its pages. Every conflict that has erupted between peoples, every battle that forged an empire, and every failure that led to that empire’s fall prove instructive to those who study them. The warlord is a military leader, a skilled commander gifted with tactical genius, keen insight, an inspiring personality, or some other asset that convinces others to follow him or her into danger.
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Goliat.webp" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 themed-grid-col">
+                
+                <div class="row mb-3 individual">
+                    <div class="col-6 themed-grid-col">Wizard
+                        <p class="texto-peque">
+                            Wizards are scions of arcane magic. Wizards tap the true power that permeates the cosmos, research esoteric rituals that can alter time and space, and hurl balls of fire that incinerate massed foes. Wizards wield spells the way warriors brandish swords. 
+                        </p>
+                        <button type="button" class="btn btn-dark btn-lg" href="#">
+                            Choose class
+                        </button>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <img src="Images/Wizard.png" class="img-fluid" alt="Image of Fighter">
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
