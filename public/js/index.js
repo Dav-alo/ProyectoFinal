@@ -118,7 +118,7 @@ function eventsHandlers() {
     let loginBtn = document.getElementById('loginBtn');
     loginBtn.addEventListener('click', login);
 
-    let loginForm = document.getElementById('createFormModal');
+    let loginForm = document.getElementById('registro');
     loginForm.onsubmit = (e)=>{
         e.preventDefault();
         console.log('stopped!');
