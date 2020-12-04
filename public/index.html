@@ -77,19 +77,145 @@
                 <a class="nav-link" href="nosotros.html"> Us </a>
             </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <!-- Button linked to REGISTRO -->
-            <li class="nav-item" id="right">
-                <a class="nav-link" href="RegisterPage.html">
-                    Register
-                </a>
-            </li>
-            <li class="nav-item" id="right">
-                <!-- Button linked to login -->
-                <a class="nav-link" href="LoginPage.html">
-                    Login
-                </a>
-        </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="form-group">
+                                <label for="">Correo</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fas fa-user    "></i></span>
+                                    </div>
+                                    <input type="text" class="col-10 form-control" name="" id="userInputLogin"
+                                        aria-describedby="helpId" placeholder="correo registrado" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fas fa-key    "></i></span>
+                                    </div>
+                                    <input type="password" class="col-10 form-control" name="" id="passwordInputLogin"
+                                        aria-describedby="helpId" placeholder="correo registrado" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Respuesta:</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend" id="loginResponseMSG">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls">
+                                    <button id="loginBtn" type="button" class="btn btn-success">Login</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                        No tienes cuenta!
+                                        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">
+                                            Registrate aquí
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createFormModal">
+            Registrar usuario
+
+        </button>
+        <button>
+            <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="createFormModal" tabindex="-1" role="dialog" aria-labelledby="createFormModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createFormModal">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form method="POST" id="createUserForm">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" name="nombre" id="" class="form-control"
+                                        placeholder="Nombre o nombres" aria-describedby="helpId" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="apellidos" id="" class="form-control"
+                                        placeholder="Apellidos" aria-describedby="helpId" required>
+                                </div>
+                            </div>
+                            <input type="email" name="email" id="" class="form-control mt-3" placeholder="Correo"
+                                aria-describedby="helpId" required>
+                            <input type="password" name="password1" id="password1" class="form-control mt-3"
+                                placeholder="Contraseña" aria-describedby="helpId" required>
+                            <input type="password" name="password2" id="password2" class="form-control mt-3"
+                                placeholder="Confirmar contraseña" aria-describedby="helpId" required>
+                            <input type="date" class="form-control mt-3" value="2000-01-01" name="fecha" id="">
+
+                            <div class="radioB mt-3 border">
+                                <div class="form-check">
+                                    <label class="form-check-label ml-3">
+                                        <input type="radio" class="form-check-input sexoF" name="sexo" id="" value="M"
+                                            checked>
+                                        Mujer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label ml-3">
+                                        <input type="radio" class="form-check-input sexoM" name="sexo" id="" value="H">
+                                        Hombre
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="url" name="image" id="" class="form-control mt-3"
+                                placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+                            <div id="responseMSG"></div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" id="createUserBtn" class="btn btn-success "
+                                    disabled>Guardar</button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </nav>
 
@@ -131,6 +257,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/index.js"></script> 
 </body>
 
 </html>
