@@ -1,6 +1,8 @@
 //Funcion para el cambio de puntos dentro de Escogerpuntos.html 
 //Ta raro como funcion xd 
 
+import $ from 'jquery';
+
 $("[name=range]").on("change", function () {
     $("[for=range]").val(this.value + "  puntos");
 }).trigger("change");
