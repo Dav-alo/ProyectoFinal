@@ -85,135 +85,13 @@
                 </a>
             </li>
             <li class="nav-item" id="right">
-                <!-- Button trigger modal -->
+                <!-- Button linked to login -->
                 <a class="nav-link" href="LoginPage.html">
                     Login
                 </a>
         </ul>
 
     </nav>
-    <!-- Modal FOR lOGIN  -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <form class="form-signin">
-                        <p>Correo</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
-                                required autofocus>
-                        </div>
-                        <p>Password</p>
-                        <label for="inputPassword" class="sr-only">Contraseña</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
-                                required>
-                        </div>
-
-                        <div class="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                    </form>
-                    <div class="form-group">
-                        <label for="password">Respuesta:</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend" id="loginResponseMSG">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="loginBtn" class="btn btn-primary" type="submit">Sign in</button>
-
-                </div>
-                <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
-                    data-dismiss="modal">Registrate aqui! </a></p>
-            </div>
-        </div>
-    </div>
-    <!-- Modal FOR Registro -->
-    <div class="modal fade" id="registro" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Registrar Usuarios</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="signup-form">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-6"><input type="text" class="form-control" name="first_name"
-                                            placeholder="Nombre o Nombres" required="required"></div>
-                                    <div class="col-6"><input type="text" class="form-control" name="last_name"
-                                            placeholder="Apellido" required="required"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="email" placeholder="Email"
-                                    required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="Contraseña"
-                                    required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="confirm_password"
-                                    placeholder="Confirmar Contraseña" required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="date" class="form-control" name="birthdate" placeholder="01/01/2000"
-                                    required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="radio" id="sexo" name="sexo" value="Hombre">
-                                <label for="sexo">Hombre</label><br>
-                                <input type="radio" id="sexo1" name="sexo" value="Mujer">
-                                <label for="sexo1">Mujer</label><br>
-                            </div>
-
-
-                            <div class="form-group">
-                                <input type="url" class="form-control" name="URL" placeholder="Url de tu imagen"
-                                    required="required">
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
-                            </div>
-                        </form>
-                        <div class="text-center">Ya tienes una cuenta? <a data-toogle="modal" href="#login"
-                                data-toggle="modal" data-target="#login" data-dismiss="modal">Login</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--FINAL DE MODAL DE HOME Y REGISTRO -->
 
     <div class="jumbotron">
         <h1 class="display-4">D & D </h1>
@@ -253,10 +131,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <script>
-        eventsHandlers();
-    </script>
 </body>
 
 </html>

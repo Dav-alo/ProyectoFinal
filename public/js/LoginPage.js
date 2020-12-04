@@ -76,63 +76,9 @@ function login() {
     })
 }
 
-function createUser() {
-    console.log('createUser');
-    let eles = document.getElementById('createFormModal').getElementsByTagName('input');
-    let user = {};
-    for (let i = 0; i < eles.length; i++) {
-        if (eles[i].getAttribute('type') === 'text') {
-            user[eles[i].getAttribute('name')] = eles[i].value;
-        }
-        if (eles[i].getAttribute('type') === 'email') {
-            user[eles[i].getAttribute('name')] = eles[i].value;
-        }
-        if (eles[i].getAttribute('type') === 'password') {
-            user['password'] = eles[i].value;
-        }
-        if (eles[i].getAttribute('type') === 'date') {
-            user[eles[i].getAttribute('name')] = eles[i].value;
-        }
-        if (eles[i].getAttribute('type') === 'url') {
-            user[eles[i].getAttribute('name')] = eles[i].value;
-        }
-        if (eles[i].getAttribute('type') === 'radio') {
-            if(eles[i].checked)
-                user[eles[i].getAttribute('name')] = eles[i].value;
-        }
-    }
-    console.log(user);
-    let url = APIURL + "/users/";
-    sendHTTPRequest(url, JSON.stringify(user), HTTTPMethods.post, (data) => {
-        //window.location.replace('/consulta.html');
-        document.getElementById('responseMSG').innerHTML = '<p class="text-success">Sucess!</p>';
-    }, (error) => {
-        document.getElementById('responseMSG').innerHTML = '<p class="text-danger">'+error+'</p>';
-    }, TOKEN)
-
-
-}
-
-
 function eventsHandlers() {
     let loginBtn = document.getElementById('loginBtn');
     loginBtn.addEventListener('click', login);
-
-    let loginForm = document.getElementById('registro');
-    loginForm.onsubmit = (e)=>{
-        e.preventDefault();
-        console.log('stopped!');
-        createUser(e.target);
-    }
-    loginForm.addEventListener('change',(e)=>{
-        let disableBtn = false;
-        let list = loginForm.querySelectorAll('input:invalid');
-        if(list.length>0) disableBtn = true;
-        if(document.getElementById('password1').value !== document.getElementById('password2').value)disableBtn = true;
-        document.getElementById('createUserBtn').disabled = disableBtn;
-        console.log(`Status of createUserBtn:${disableBtn}`)
-    });
-
 }
 document.addEventListener('DOMContentLoaded', () => {
     eventsHandlers();
