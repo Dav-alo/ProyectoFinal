@@ -1,4 +1,4 @@
-// import dependencies and initialize expresss
+// import dependencies and initialize express
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
