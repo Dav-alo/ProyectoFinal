@@ -140,6 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log(event.relatedTarget);
 
     });
-
-
 });
