@@ -93,7 +93,7 @@
 
     </nav>
     <!-- Modal FOR lOGIN  -->
-    <div class="modal fade" id="#login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -129,21 +129,22 @@
                             </label>
                         </div>
                     </form>
-                </div>
-                <div class="form-group">
-                    <label for="password">Respuesta:</label>
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend" id="loginResponseMSG">
-                      </div>
+                    <div class="form-group">
+                        <label for="password">Respuesta:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend" id="loginResponseMSG">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button class="btn btn-primary" type="submit">Sign in</button>
 
                 </div>
                 <p class="Registro">No tienes cuenta? <a href="#registro" data-toggle="modal" data-target="#registro"
-                        data-dismiss="modal">Registrate aqui! </a></p>
+                    data-dismiss="modal">Registrate aqui! </a></p>
             </div>
         </div>
     </div>
@@ -251,6 +252,10 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/8063d9ff98.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script>
+        eventsHandlers();
+    </script>
 </body>
 
 </html>
