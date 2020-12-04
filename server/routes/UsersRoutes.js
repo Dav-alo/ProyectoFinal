@@ -6,7 +6,16 @@ const router = express();
 
 router.post('/', (req, res) => {
     let b = req.body;
-    if (b.nombre && b.apellidos && b.email && b.sexo && b.fecha) {
+    if (b.race){
+
+    }
+    else if(b.class){
+
+    }
+    //else if(b.fuerza && b.) {
+
+    //}
+    else if (b.nombre && b.apellidos && b.email && b.sexo && b.fecha) {
         let u = usersCtrl.getUniqueUser(b.nombre, b.apellidos, b.email);
         console.log(u);
         if (u) {
