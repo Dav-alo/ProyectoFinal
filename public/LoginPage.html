@@ -95,41 +95,52 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <th scope="col">
-                            <div class="container-fluid">
-                                <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                                <a class="btn btn-dark" href="index.html" role="button">X</a>
+                        <div class="container-fluid">
+                            <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                            <a class="btn btn-dark" href="index.html" role="button">X</a>
+                        </div>
+                    </tr>
+                    <tr>
+                        <form class="form-signin">
+                            <p>Correo</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
+                                    required autofocus>
                             </div>
-                        </th>
-                        <th scope="col">
-                            <form class="form-signin">
-                                <p>Correo</p>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    </div>
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico"
-                                        required autofocus>
+                            <p>Password</p>
+                            <label for="inputPassword" class="sr-only">Contraseña</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <p>Password</p>
-                                <label for="inputPassword" class="sr-only">Contraseña</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                    </div>
-                                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
-                                        required>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
+                                    required>
+                            </div>
+    
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                        </form>
+
+                        <div class="form-group">
+                            <label for="password">Respuesta:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend" id="loginResponseMSG">
                                 </div>
-        
-                                <div class="checkbox mb-3">
-                                    <label>
-                                        <input type="checkbox" value="remember-me"> Remember me
-                                    </label>
-                                </div>
-                            </form>
-                        </th>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <a class="btn btn-dark" href="index.html" role="button">X</a>
+                        <button id="loginBtn" class="btn btn-primary" type="submit">Sign in</button>
                     </tr>
                 </tbody>
+                <p class="Registro">No tienes cuenta? <a href="RegisterPage.html" role="button">Registrate aquí!</a></p>
             </table>
         </div>
     </div>
