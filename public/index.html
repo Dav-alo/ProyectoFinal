@@ -93,10 +93,8 @@
 
     </nav>
     <!-- Modal FOR lOGIN  -->
-    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#login" id="#login"
-        aria-labelledby="#login">
-        <div class="modal-dialog">
+    <div class="modal fade" id="#login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
@@ -107,8 +105,6 @@
 
                 <div class="modal-body">
                     <form class="form-signin">
-
-
                         <p>Correo</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -133,6 +129,13 @@
                             </label>
                         </div>
                     </form>
+                </div>
+                <div class="form-group">
+                    <label for="password">Respuesta:</label>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend" id="loginResponseMSG">
+                      </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
