@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const PATH = require('path');
-const USERS_DB = require('../data/users.json');
+const USERS_DB = require('../../data/users.json');
 let CURRENT_ID = 0;
 
 
