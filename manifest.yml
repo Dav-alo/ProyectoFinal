@@ -2,13 +2,13 @@
 applications:
 - instances: 1
   timeout: 180
-  name: holagitfah
+  name: Proyectocloud
   buildpack: sdk-for-nodejs
   command: npm start
   disk_quota: 1G
   memory: 128MB
   domain: mybluemix.net
-  host: holagitfah
+  host: Proyectocloud
   services:
     - Cloudant-30088
   env:

@@ -1,1 +1,35 @@
-[{"nombre":"doe","apellidos":"Doe","email":"john@gmail.com","password":"doej","fecha":"2000-10-28","sexo":"H","uid":10001,"image":"https://randomuser.me/api/portraits/men/0.jpg","token":"mJA8utU3Cp-10001","password1":"undefined","password2":"undefined"},{"nombre":"nom-47","apellidos":"app-47","email":"correo0@iteso.mx","password":"hola123","fecha":"1900-10-15","sexo":"M","uid":10002,"image":"https://randomuser.me/api/portraits/women/1.jpg","token":"J1wH0ESPd5-10002"},{"nombre":"Juanas","apellidos":"Garcia","email":"jog@gmail.com","password":"hola123","fecha":"2000-10-28","sexo":"M","uid":10006,"image":"https://randomuser.me/api/portraits/women/0.jpg","password1":"undefined","password2":"undefined","token":"eGFKsKhoIO-10006"}]
+[{
+    "nombre": "jon",
+    "apellidos": "Doe",
+    "email": "john@gmail.com",
+    "password": "doej",
+    "fecha": "2000-10-28",
+    "sexo": "H",
+    "uid": 10001,
+    "image": "https://randomuser.me/api/portraits/men/0.jpg",
+    "token": "mJA8utU3Cp-10001",
+    "password1": "undefined",
+    "password2": "undefined"
+}, {
+    "nombre": "nom-47",
+    "apellidos": "app-47",
+    "email": "correo0@iteso.mx",
+    "password": "hola123",
+    "fecha": "1900-10-15",
+    "sexo": "M",
+    "uid": 10002,
+    "image": "https://randomuser.me/api/portraits/women/1.jpg",
+    "token": "J1wH0ESPd5-10002"
+}, {
+    "nombre": "Juanas",
+    "apellidos": "Garcia",
+    "email": "jog@gmail.com",
+    "password": "hola123",
+    "fecha": "2000-10-28",
+    "sexo": "M",
+    "uid": 10006,
+    "image": "https://randomuser.me/api/portraits/women/0.jpg",
+    "password1": "undefined",
+    "password2": "undefined",
+    "token": "eGFKsKhoIO-10006"
+}]

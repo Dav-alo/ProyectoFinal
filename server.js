@@ -53,10 +53,6 @@ app.post('/api/login',(req,res)=>{
     }
 });
 
-// app.get('/',(req,res)=>{
-//     res.send('Users app práctica 4');
-// });
-
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
